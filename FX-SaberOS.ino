@@ -494,7 +494,7 @@ Serial.println(configAdress);
  // according to debug on 3.11.2017, these 2 lines below cause the sporadic disable of sound. For audio tracker they are not strictly needed.
   //pinMode(SPK1, INPUT);
   //pinMode(SPK2, INPUT);
-  SinglePlay_Sound(soundFont.getBoot());//11);
+  //SinglePlay_Sound(soundFont.getBoot());//11);
   delay(20);
   if (storage.volume <= 15) {
     Set_Volume(15);
@@ -504,7 +504,7 @@ Serial.println(configAdress);
 #ifdef ADF_PIXIE_BLADE
   InitAdafruitPixie(ledPins);
 #endif
-  SinglePlay_Sound(11);
+  //SinglePlay_Sound(11);
   delay(850);
 
 
@@ -1082,7 +1082,7 @@ void loop() {
       PrevSaberState = S_SLEEP;
       ADCSRA = 135; // old_ADCSRA;   // re-enable ADC conversion
       // play boot sound
-      SinglePlay_Sound(11);
+      //SinglePlay_Sound(11);
       delay(20);
     //}
   }

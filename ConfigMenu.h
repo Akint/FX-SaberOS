@@ -25,7 +25,7 @@ enum ConfigModeSubStatesEnum {CS_SOUNDFONT, CS_FLICKERTYPE, CS_MAINCOLOR, CS_CLA
 enum ConfigModeSubStatesEnum {CS_SOUNDFONT, CS_FLICKERTYPE, CS_MAINCOLOR, CS_CLASHCOLOR, CS_BLASTCOLOR, CS_SWINGSENSITIVITY, CS_VOLUME, CS_SLEEPINIT, CS_BATTERYLEVEL, CS_LASTMEMBER, CS_POWERONOFFTYPE, CS_STORAGEACCESS, CS_UARTMODE}; // never delete CS_LASTMEMBER!!! Needed to calculate number of elements in the enum type!!!
 #endif
 #if defined PIXELBLADE
-enum ConfigModeSubStatesEnum {CS_SOUNDFONT, CS_FLICKERTYPE, CS_MAINCOLOR, CS_CLASHCOLOR, CS_BLASTCOLOR, CS_SWINGSENSITIVITY, CS_VOLUME, CS_SLEEPINIT, CS_BATTERYLEVEL, CS_LASTMEMBER, CS_POWERONOFFTYPE, CS_STORAGEACCESS, CS_UARTMODE}; // never delete CS_LASTMEMBER!!! Needed to calculate number of elements in the enum type!!!
+enum ConfigModeSubStatesEnum {CS_BATTERYLEVEL, CS_SLEEPINIT, CS_MAINCOLOR, CS_CLASHCOLOR, CS_BLASTCOLOR, CS_SWINGSENSITIVITY, CS_SOUNDFONT, CS_VOLUME, CS_FLICKERTYPE, CS_LASTMEMBER, CS_POWERONOFFTYPE, CS_STORAGEACCESS, CS_UARTMODE}; // never delete CS_LASTMEMBER!!! Needed to calculate number of elements in the enum type!!!
 #endif
 
 // ====================================================================================

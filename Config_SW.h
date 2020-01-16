@@ -22,8 +22,8 @@
 #define MEMORYBASE       32
 #define VOL          31
 #define SOUNDFONT       3
-#define SWING_THRESHOLD         1000
-#define CLASH_THRESHOLD 10 // 10 was the original value in LSOS, Jason's value changed it to 6, but it resulted in false clash trigges at more forceful swings
+#define SWING_THRESHOLD         500
+#define CLASH_THRESHOLD 6 // 10 was the original value in LSOS, Jason's value changed it to 6, but it resulted in false clash trigges at more forceful swings
 /************************************/
 
 #if defined LEDSTRINGS
@@ -66,8 +66,8 @@
  * or by polling the INT_STATUS register via I2C and determining the value (-> CLASH_DET_MPU_POLL)
  * of bit 6
  */
-#define CLASH_DET_MPU_INT
-//#define CLASH_DET_MPU_POLL
+//#define CLASH_DET_MPU_INT
+#define CLASH_DET_MPU_POLL
  
 /* FX DURATIONS AND SUPRESS TIMES
  *  effects cannot be retriggered for the duration
@@ -91,7 +91,7 @@
 #define BLASTER_FX_DURATION 150
 #define SWING_FX_DURATION 400
 // select if swing shall be triggered by change in blade orientation and rotation; otherwise swing is simply determined by blade acceleration
-#define SWING_QUATERNION
+//#define SWING_QUATERNION
 
 /*
  * BUTTONS PARAMETERS
@@ -115,7 +115,7 @@
  * YOU'LL BURN YOUR BLADE'S LED 
  ************************************/
 #define MAX_BRIGHTNESS    230
-#define FLICKERDEPTH 100
+#define FLICKERDEPTH 230
 
 
 /* DEEP_SLEEP
@@ -127,7 +127,7 @@
  *************************************/
 #define DEEP_SLEEP
 #if defined DEEP_SLEEP
-  #define SLEEPYTIME      (1000UL * 60 * 2) //2 mins, after which the board will automatically go to sleep mode (to be implemented)
+  #define SLEEPYTIME      (1000UL * 60 * 20) //20 mins, after which the board will automatically go to sleep mode (to be implemented)
   #include <avr/sleep.h>
   #include <avr/power.h>
 #endif  // DEEP_SLEEP
@@ -139,7 +139,7 @@
  *  If instead you would like to work with pre-set color profiles (15 different, pre-defined colors)
  *  comment out the line with GRAVITY_COLOR, which will define COLOR_PROFILE to be used.
  *************************************/
-//#define GRAVITY_COLOR
+#define GRAVITY_COLOR
 #ifndef GRAVITY_COLOR
   #define COLOR_PROFILE
 #endif
@@ -191,11 +191,11 @@ const long InternalReferenceVoltage = 1062;  // Adjust this value to your board'
  * For daily use I recommend you comment LS_INFO
  * When you plug your device to USB uncomment LS_INFO !
  */
-#define LS_LOOPLENGHT
+//#define LS_LOOPLENGHT
 #define LS_SERIAL  //enable serial communication using Wire library
 #if defined LS_SERIAL
 //#define LS_FSM
-#define LS_INFO
+//#define LS_INFO
 //#define LS_DEBUG
 #endif
 
@@ -234,4 +234,3 @@ const long InternalReferenceVoltage = 1062;  // Adjust this value to your board'
 
 
 #endif /* CONFIG_SW_H_ */
-

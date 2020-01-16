@@ -20,9 +20,9 @@
  *  If you have a home-brew solution using the Arduino Nano, choose DIYINO_PRIME below
  */
 
-//#define DIYINO_PRIME // including home-brew
+#define DIYINO_PRIME // including home-brew
 //#define DIYINO_STARDUST_V2
-#define DIYINO_STARDUST_V3
+//#define DIYINO_STARDUST_V3
 
 /***** BOARD PINOUT DEFINITIONS ******/
 
@@ -122,7 +122,7 @@
   
   #ifdef PIXELBLADE
     // How many leds in one strip?
-    #define NUMPIXELS 115  // can go up to 120, could lead to memory overflow if further increased, causing instability
+    #define NUMPIXELS 119  // can go up to 120, could lead to memory overflow if further increased, causing instability
     // For led chips like NEOPIXELs, which have a data line, ground, and power, you just
     // need to define DATA_PIN.
     #define DATA_PIN       13 // D13
@@ -225,4 +225,3 @@
 #endif
 
 #endif /* CONFIG_HW_H_ */
-
